@@ -1532,12 +1532,12 @@ a:hover {
   color: #ff5821;
 }
 #background-wrapper {
-  background-color: #000000;
+  background-color: #333;
   background-position: left top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-bottom: 0;
-  border-bottom: 2px solid #ff5821;
+  /*border-bottom: 2px solid #ff5821;*/
 }
 .benches {
   background-image: url(../img/backgrounds/benches.png);

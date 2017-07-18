@@ -1,6 +1,6 @@
+<div id="background-wrapper">
 <!-- ======== @Region: #content ======== -->
 <div id="container-fluid">
-    <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
     <div class="header">
       <div class="header-inner">
         <!--navbar-branding/logo - hidden image tag & site name so things like Facebook to pick up, actual logo set via CSS for flexibility -->
@@ -73,4 +73,5 @@
       </div>
     </div>
 <!-- /row -->
+</div>
 </div>

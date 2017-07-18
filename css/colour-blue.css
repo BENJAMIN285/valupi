@@ -80,7 +80,8 @@ a.btn-hh-trigger {
   background: #00a8cc;
 }
 #background-wrapper {
-  border-bottom-color: #00a8cc;
+  border: 2px solid #00a8cc;
+    /*border-bottom-color: #00a8cc;*/
 }
 .header-hidden {
   background: #00a8cc;

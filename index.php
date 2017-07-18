@@ -49,7 +49,7 @@
   
   <body class="page-index has-hero">
     <!--Change the background class to alter background image, options are: benches, boots, buildings, city, metro -->
-    <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
+    <div id="background-wrapper">
       
       <!-- ======== @Region: #navigation ======== -->
       <div id="navigation" class="wrapper">
@@ -206,64 +206,18 @@
       <div class="block block-border-bottom-grey">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3">
-                    <h2 class="block-title">Búsqueda</h2>
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading" role="tab" id="heading1">
-                                <h3 class="panel-title">
-                                    <a class="panel-heading-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                        Filtro #1
-                                    </a>
-                                </h3>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
-                                <div class="panel-body">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading" role="tab" id="heading2">
-                                <h3 class="panel-title">
-                                    <a class="panel-heading-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                        Filtro #2
-                                    </a>
-                                </h3>
-                            </div>
-                            <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
-                                <div class="panel-body">
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading" role="tab" id="heading3">
-                                <h3 class="panel-title">
-                                    <a class="panel-heading-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                                        Filtro #3
-                                    </a>
-                                </h3>
-                            </div>
-                            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-                                <div class="panel-body">
-                                    
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <button type="button" id="btnFiltro" class="btn btn-more btn-xs text-uppercase i-right">Aplicar Filtros <i class="fa fa-angle-right"></i></button>
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-12">
-                            
-                        </div>
-                        <div class="col-md-12">
-                            <div class="panel panel-primary">
-                                <div class="panel-body">
-                                    
-                                </div>
-                            </div>
+                <div class="col-md-10">
+                    
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+
                         </div>
                     </div>
                 </div>
@@ -537,7 +491,7 @@
         $(document).ready(function(){
             
             $('#btnRegistrar').click(function(){
-                $.get('registrar.php',function(data){
+                $.get('registro.php',function(data){
                     bootbox.dialog({
                         message: data,
                         closeButton: false,
@@ -547,7 +501,17 @@
             });
             
             $('#btnAcceder').click(function(){
-                $.get('acceder.php',function(data){
+                $.get('acceso.php',function(data){
+                    bootbox.dialog({
+                        message: data,
+                        closeButton: false,
+                        onEscape: true
+                    });
+                });
+            });
+            
+            $('#btnFiltro').click(function(){
+                $.get('filtro.php',function(data){
                     bootbox.dialog({
                         message: data,
                         closeButton: false,
